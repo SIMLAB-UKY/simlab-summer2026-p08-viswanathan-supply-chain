@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": "MINE",
+      "type": "mine",
+      "location": "Alberta",
+      "lat": 53.5,
+      "lon": -113.5
+    },
+    {
+      "id": "PROC",
+      "type": "processing",
+      "location": "Edmonton",
+      "lat": 53.5,
+      "lon": -113.5
+    },
+    {
+      "id": "PORT",
+      "type": "port",
+      "location": "Vancouver",
+      "lat": 49.3,
+      "lon": -123.1
+    },
+    {
+      "id": "CUS1",
+      "type": "customer",
+      "location": "Japan",
+      "lat": 35.7,
+      "lon": 139.7
+    },
+    {
+      "id": "CUS2",
+      "type": "customer",
+      "location": "South Korea",
+      "lat": 37.5,
+      "lon": 127.0
+    },
+    {
+      "id": "CUS3",
+      "type": "customer",
+      "location": "Germany",
+      "lat": 51.2,
+      "lon": 10.5
+    }
+  ],
+  "arcs": [
+    {
+      "from": "MINE",
+      "to": "PROC",
+      "mode": "truck",
+      "cost_per_t": 8,
+      "ghg_t_per_t": 0.012
+    },
+    {
+      "from": "PROC",
+      "to": "PORT",
+      "mode": "rail",
+      "cost_per_t": 12,
+      "ghg_t_per_t": 0.008
+    },
+    {
+      "from": "PORT",
+      "to": "CUS1",
+      "mode": "ship",
+      "cost_per_t": 45,
+      "ghg_t_per_t": 0.031
+    },
+    {
+      "from": "PORT",
+      "to": "CUS2",
+      "mode": "ship",
+      "cost_per_t": 42,
+      "ghg_t_per_t": 0.029
+    },
+    {
+      "from": "PORT",
+      "to": "CUS3",
+      "mode": "ship",
+      "cost_per_t": 78,
+      "ghg_t_per_t": 0.054
+    }
+  ]
+}
